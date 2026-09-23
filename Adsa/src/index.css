@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap");
+@import "tailwindcss";
+@import "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+@theme {
+  --font-sans: "Tajawal", sans-serif;
+
+  --color-primary: #f97316;
+  --color-primary-light: #fb923c;
+  --color-primary-dark: #ea580c;
+  --color-accent: #fbbf24;
+  --color-dark: #0a0a0a;
+  --color-dark-secondary: #111111;
+  --color-dark-tertiary: #1a1a1a;
+  --color-dark-card: #161616;
+  --color-border: #262626;
+  --color-border-light: #333333;
+}
+@layer base {
+  body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    font-family:
+      "Tajawal",
+      system-ui,
+      -apple-system,
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+@utility container {
+  margin-inline: auto;
+}
+@utility btn-primary {
+  @apply inline-flex items-center justify-center px-8 py-4 font-semibold text-white rounded-full transition-all duration-300 cursor-pointer bg-linear-to-r from-orange-500 to-orange-600 hover:-translate-y-0.5;
+}
+
+@utility btn-secondary {
+  @apply inline-flex items-center justify-center px-8 py-4 font-semibold text-white rounded-full border border-neutral-800 bg-transparent transition-all duration-300 cursor-pointer hover:text-orange-500 hover:bg-orange-500/10 hover:border-orange-500;
+}
+
+@utility glass-card {
+  @apply rounded-3xl bg-neutral-900/80 border border-neutral-800;
+}
+
+@utility section-label {
+  @apply inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-medium text-orange-500 bg-orange-500/10 border border-orange-500/30 rounded-full before:content-[''] before:w-1.5 before:h-1.5 before:bg-orange-500 before:rounded-full before:animate-pulse;
+}
+@utility gradient-text {
+  @apply bg-linear-to-r from-orange-500 to-amber-400 bg-clip-text text-transparent;
+}
+@utility section-title {
+  @apply text-4xl leading-tight font-bold text-white md:text-5xl lg:text-6xl;
+}
+@utility section-subtitle {
+  @apply mt-4 text-[1.125rem] leading-relaxed text-neutral-400;
+}
+@utility input-dark {
+  @apply transition-all duration-300 outline-none bg-dark-card border border-border focus:border-primary focus:ring-4 focus:ring-primary/10;
+}
+@utility card {
+  @apply transition-all duration-500 rounded-3xl bg-dark-card border border-border hover:-translate-y-1 hover:border-border-light;
+}
+
+@layer base {
+  button {
+    cursor: pointer;
+  }
+}
+
+.desktop-nav .active {
+  background-image: linear-gradient(to right, #f97316, #ea580c);
+  color: #ffffff;
+}
+
+.mobile-nav .active {
+  background-color: rgba(249, 115, 22, 0.1);
+  color: #f97316;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
