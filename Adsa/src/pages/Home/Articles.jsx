@@ -22,8 +22,8 @@ export default function Articles() {
                 محتوى منتقى لبدء رحلة تعلمك
               </p>
             </div>
-            <a
-              href="/blog"
+            <Link
+              to={"/blog"}
               className="group inline-flex items-center gap-2 px-5 py-2.5 bg-linear-to-r from-orange-500 to-orange-600 text-white rounded-xl font-medium transition-all duration-300 hover:-translate-y-0.5"
             >
               عرض الكل
@@ -40,7 +40,7 @@ export default function Articles() {
                   d="M9 5l7 7-7 7"
                 ></path>
               </svg>
-            </a>
+            </Link>
           </div>
           <div className="space-y-8">
             {postsData.posts.slice(0, 3).map((post) => (

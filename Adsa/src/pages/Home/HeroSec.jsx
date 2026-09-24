@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function HeroSec() {
   return (
@@ -32,8 +33,8 @@ export default function HeroSec() {
               انغمس في أسرار المحترفين ونصائح عملية لتطوير مهاراتك في التصوير.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
-              <a
-                href="/blog"
+              <Link
+                to={"/blog"}
                 className="btn-primary inline-flex items-center justify-center gap-2 group"
               >
                 <span>استكشف المقالات</span>
@@ -50,9 +51,9 @@ export default function HeroSec() {
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
                   ></path>
                 </svg>
-              </a>
-              <a
-                href="/about"
+              </Link>
+              <Link
+                to={"/about"}
                 className="btn-secondary inline-flex items-center justify-center gap-2"
               >
                 <svg
@@ -69,7 +70,7 @@ export default function HeroSec() {
                   ></path>
                 </svg>
                 <span>اعرف المزيد</span>
-              </a>
+              </Link>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
               <div
